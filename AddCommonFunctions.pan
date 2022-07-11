@@ -1,4 +1,4 @@
-global StartingWinList, EndWindowList, vCount, WinChoice
+global StartingWinList, EndWindowList, vCount, WinChoice, EndSize
 vCount=0
 StartingWinList=ListWindows("")
 
@@ -73,13 +73,13 @@ Clipboard()=vClipHold
 
 openprocedure "Symbol Reference"
 setproceduretext {bigmessage "Option+7= ¶  [in some functions use chr(13)
-Option+(=)= ≠ [not equal to]
-Option+ \ = « and Option+Shift+ \ =» [chevron]
+Option+= ≠ [not equal to]
+Option+\= « || Option+Shift+\= » [chevron]
 Option+L= ¬ [tab]
 Option+Z= Ω [sum or Omega]
 Option+V= √ [checkmark]
 Option+M= µ [nano]
-Option+<or>=≤≥ [than or equal to]"
+Option+< or >=≤ or ≥ [than or equal to]"
 
 }
 
@@ -89,13 +89,9 @@ Option+<or>=≤≥ [than or equal to]"
 ///Clears all new windows made
 //********
 EndWindowList=listwindows("")
+EndSize=arraysize(EndWindowList,¶)
 vCount=1
 loop 
-
-case vCount=arraysize(StartingWinList,¶)+2
-stop
-endcase
-
 
 WinChoice=str(array(EndWindowList,val(vCount),¶))
 if StartingWinList notcontains WinChoice
@@ -104,9 +100,9 @@ closewindow
 increment vCount
     case StartingWinList contains WinChoice
     increment vCount
-        repeatloopif vCount≠arraysize(StartingWinList,¶)+2
+        repeatloopif vCount≠EndSize+1
     endcase
 else
 increment vCount
 endif
-until vCount=arraysize(StartingWinList,¶)+2
+until vCount=EndSize+1
