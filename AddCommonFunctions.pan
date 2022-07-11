@@ -76,10 +76,10 @@ setproceduretext {bigmessage "Option+7= ¶  [in some functions use chr(13)
 Option+= ≠ [not equal to]
 Option+\= « || Option+Shift+\= » [chevron]
 Option+L= ¬ [tab]
-Option+Z= Ω [sum or Omega]
+Option+Z= Ω [lineitem or Omega]
 Option+V= √ [checkmark]
 Option+M= µ [nano]
-Option+< or >=≤ or ≥ [than or equal to]"
+Option+<or>= ≤or≥ [than or equal to]"
 
 }
 
