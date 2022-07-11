@@ -1,6 +1,11 @@
+global StartingWinList, EndWindowList, vCount, WinChoice
+vCount=0
+StartingWinList=ListWindows("")
+
 makenewprocedure "(CommonFunctions)", ""
 makenewprocedure "ExportMacros",""
 makenewprocedure "ImportMacros",""
+makenewprocedure "GetDBInfo",""
 ;---------
 openprocedure "ExportMacros"
 setproceduretext {local Dictionary1, ProcedureList
@@ -33,3 +38,60 @@ loadallprocedures Dictionary2,ProcedureList
 message ProcedureList //messages which procedures got changed
 }
 
+openprocedure "GetDBInfo"
+setproceduretext {
+local DBChoice,vAnswer1
+local DBChoice, vAnswer1, vClipHold
+
+Message "This Procedure will give you the names of Fields, procedures, etc in the Database"
+//The spaces are to make it look nicer on the text box
+DBChoice="fields
+forms
+procedures
+permanent
+folder
+level
+autosave
+fileglobals
+filevariables
+fieldtypes
+records
+selected
+changes"
+superchoicedialog DBChoice,vAnswer1,“caption="What Info Would You Like?"
+captionheight=1”
+
+
+vClipHold=dbinfo(vAnswer1,"")
+bigmessage "Your clipboard now has the name(s) of "+str(vAnswer1)+"(s)"+¶+
+"Preview: "+¶+str(vClipHold)
+Clipboard()=vClipHold
+}
+
+
+
+///***********
+///Clears all new windows made
+//********
+EndWindowList=listwindows("")
+vCount=1
+loop 
+
+case vCount=arraysize(StartingWinList,¶)+1
+stop
+endcase
+
+
+WinChoice=str(array(EndWindowList,val(vCount),¶))
+if StartingWinList notcontains WinChoice
+  window WinChoice
+closewindow
+increment vCount
+    case StartingWinList contains WinChoice
+    increment vCount
+        repeatloopif vCount≠arraysize(StartingWinList,¶)+1
+    endcase
+else
+increment vCount
+endif
+until vCount=arraysize(StartingWinList,¶)+1
