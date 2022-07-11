@@ -5,6 +5,7 @@ StartingWinList=ListWindows("")
 makenewprocedure "(CommonFunctions)", ""
 makenewprocedure "ExportMacros",""
 makenewprocedure "ImportMacros",""
+makenewprocedure "Symbol Reference",""
 makenewprocedure "GetDBInfo",""
 ;---------
 openprocedure "ExportMacros"
@@ -70,6 +71,20 @@ Clipboard()=vClipHold
 
 
 
+openprocedure "Symbol Reference"
+setproceduretext {bigmessage "Option+7= ¶  [in some functions use chr(13)
+Option+(=)= ≠ [not equal to]
+Option+ \ = « and Option+Shift+ \ =» [chevron]
+Option+L= ¬ [tab]
+Option+Z= Ω [sum or Omega]
+Option+V= √ [checkmark]
+Option+M= µ [nano]
+Option+<or>=≤≥ [than or equal to]"
+
+}
+
+
+
 ///***********
 ///Clears all new windows made
 //********
@@ -77,7 +92,7 @@ EndWindowList=listwindows("")
 vCount=1
 loop 
 
-case vCount=arraysize(StartingWinList,¶)+1
+case vCount=arraysize(StartingWinList,¶)+2
 stop
 endcase
 
@@ -89,9 +104,9 @@ closewindow
 increment vCount
     case StartingWinList contains WinChoice
     increment vCount
-        repeatloopif vCount≠arraysize(StartingWinList,¶)+1
+        repeatloopif vCount≠arraysize(StartingWinList,¶)+2
     endcase
 else
 increment vCount
 endif
-until vCount=arraysize(StartingWinList,¶)+1
+until vCount=arraysize(StartingWinList,¶)+2
