@@ -1,0 +1,45 @@
+Barcode,SKU,Type,Model,ItemName,CurrentUser,PreviousUser,NeedsRepair,RepairsToDo,HasPanLicense,PanLicenseCode,SerialNum,CurrentLocation,FullHistory,RepairTicket,RepairHistory1,RepairDate1,RepairedBy1,RepairHistory2,RepairDate2,RepairedBy2,RepairHistory3,RepairDate3,RepairedBy3,RepairHistory4,RepairDate4,RepairedBy4,RepairHistory5,RepairDate5,RepairedBy5,RepairHistory6,RepairDate6,RepairedBy6,RepairHistory7,RepairDate7,RepairedBy7,RepairHistory8,RepairDate8,RepairedBy8,RepairHistory9,RepairDate9,RepairedBy9,RepairNotes1,RepairNotes2,RepairNotes3,RepairNotes4,RepairNotes5,RepairNotes6,RepairNotes7,RepairNotes8,RepairNotes9
+324234234,LunarLaptopMacboo4234,laptop,macbook,,Lunar,Bria,yes,screen,yes,sasdf-2da,a12093,hinckley,01/02/22 - Screen - Lunar
+02/03/21 - keyboard - Ken
+04/21/20 - key - 
+
+
+
+
+
+,,Screen,01/02/22,Lunar,keyboard,02/03/21,Ken,key,04/21/20,s,,,,,,,,,,,,,,,,,,,,,,,,,,,
+12345678910,LunarTest2Macboo8910,Test2,macbook,,Lunar,Bria,yes,sadfasfsa,yes,sasdf-2da,a12093,hinckley,07/12/22 - screen - New Keyboard added - Lunar
+04/21/20 - key -  - s
+02/03/21 - keyboard -  - Ken
+01/02/22 - Screen -  - Lunar,,Screen,01/02/22,Lunar,keyboard,02/03/21,Ken,key,04/21/20,s,screen,07/12/22,Lunar,,,,,,,,,,,,,,,,,,,New Keyboard added,,,,,
+324234234,LunarLaptopMacboo4234,laptop,macbook,,Lunar,Bria,yes,screen,yes,sasdf-2da,a12093,hinckley,01/02/22 - Screen - Lunar
+02/03/21 - keyboard - Ken
+04/21/20 - key - 
+
+
+
+
+
+,,Screen,01/02/22,Lunar,keyboard,02/03/21,Ken,key,04/21/20,s,,,,,,,,,,,,,,,,,,,,,,,,,,,
+324234234,LunarLaptopMacboo4234,laptop,macbook,,Lunar,Bria,yes,screen,yes,sasdf-2da,a12093,hinckley,01/02/22 - Screen - Lunar
+02/03/21 - keyboard - Ken
+04/21/20 - key - 
+
+
+
+
+
+,,Screen,01/02/22,Lunar,keyboard,02/03/21,Ken,key,04/21/20,s,7-12-22,,,,,,,,,,,,,,,,,,,,,,,,,,
+324234234,LunarLaptopMacboo4234,laptop,macbook,,Lunar,Bria,yes,screen,yes,sasdf-2da,a12093,hinckley,01/02/22 - Screen - Lunar
+02/03/21 - keyboard - Ken
+04/21/20 - key - 
+
+
+
+
+
+,,Screen,01/02/22,Lunar,keyboard,02/03/21,Ken,key,04/21/20,s,,,,,,,,,,,,,,,,,,,,,,,,,,,
+324234234,LunarLaptopMacboo4234,laptop,macbook,,Lunar,Bria,yes,screen,yes,sasdf-2da,a12093,hinckley,04/21/20 - key -  - s
+02/03/21 - keyboard -  - Ken
+01/02/22 - Screen -  - Lunar,,Screen,01/02/22,Lunar,keyboard,02/03/21,Ken,key,04/21/20,s,screen,01/03/00,screen,,,,,,,,,,,,,,,,,,,Luanr,,,,,
+324234234,AsdfTest1Fdsa4234,test1,fdsa,,asdf,,yes,asdf,no,asdf,asdf,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
