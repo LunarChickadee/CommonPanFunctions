@@ -40,9 +40,7 @@ message ProcedureList //messages which procedures got changed
 }
 
 openprocedure "GetDBInfo"
-setproceduretext {
-local DBChoice,vAnswer1
-local DBChoice, vAnswer1, vClipHold
+setproceduretext {local DBChoice, vAnswer1, vClipHold
 
 Message "This Procedure will give you the names of Fields, procedures, etc in the Database"
 //The spaces are to make it look nicer on the text box
