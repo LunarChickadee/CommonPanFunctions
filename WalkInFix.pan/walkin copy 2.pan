@@ -214,10 +214,10 @@ ___ ENDPROCEDURE .enterarbicocustomer __________________________________________
 ___ PROCEDURE .entry ___________________________________________________________
 waswindow=info("windowname")
 
-global MYDESCRIPTION
+global MYDESCRIPTION, DescriptionAddition
 
 MYDESCRIPTION=""
-
+DescriptionAddition=""
 
 ;debug
 
@@ -324,14 +324,14 @@ loop
         tot=quant*price
         
         MYDESCRIPTION = lookup("45ogscomments","Item",Item,"Description","",0) + ?(lookup("45ogscomments","Item",Item,"UnitNumber","",0)<>"","-"+lookup("45ogscomments","Item",Item,"UnitNumber","",0)+lookup("45ogscomments","Item",Item,"UnitName","",0),"")
-
+        DescriptionAddition=?(lookup("45ogscomments","Item",Item,"UnitNumber","",0)<>"","-"+lookup("45ogscomments","Item",Item,"UnitNumber","",0)+lookup("45ogscomments","Item",Item,"UnitName","",0),"")
         ;; item number
         ordered=str(id_number) +¬+str(item)+"-"+upper(size)+¬+                                                                                     /*item number*/
         ?(item >=10000,""," ")+
          ?(item=8999,
             extract(extract(enter,¶,numb),chr(43),5)[1,19] +
             rep(chr(32),19-length(extract(extract(enter,¶,numb),chr(43),5)[1,19])),
-            lookup(?(item≥10000 and item≤30000,"45ogscomments.warehouse","45ogscomments.linked"),"Item",str(item) + "-" + upper(size),"Description","Not OGS",0)[1,23]) 
+            (lookup(?(item≥10000 and item≤30000,"45ogscomments.warehouse","45ogscomments.linked"),"Item",str(item) + "-" + upper(size),"Description","Not OGS",0)+DescriptionAddition)[1,23]) 
             /* do away with the limiters on characters 
             the description and two other name fields should be <30 chars
             */

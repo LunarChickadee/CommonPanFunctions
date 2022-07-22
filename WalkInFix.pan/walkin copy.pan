@@ -322,7 +322,7 @@ loop
         
         
         ;; item number
-        DescriptionHolder=lookup(?(item≥10000 and item≤30000,"45ogscomments.warehouse","45ogscomments.linked"),"Item",str(item) + "-" + upper(size),"Description","Not OGS",0)+" "+lookup(?(item≥10000 and item≤30000,"45ogscomments.warehouse","45ogscomments.linked"),"Item",str(item) + "-" + upper(size),"UnitNumber","Not OGS",0)+" "+lookup(?(item≥10000 and item≤30000,"45ogscomments.warehouse","45ogscomments.linked"),"Item",str(item) + "-" + upper(size),"UnitNumber","Not OGS",0)
+        Ds=lookup(?(item≥10000 and item≤30000,"45ogscomments.warehouse","45ogscomments.linked"),"Item",str(item) + "-" + upper(size),"Description","Not OGS",0)+" "+lookup(?(item≥10000 and item≤30000,"45ogscomments.warehouse","45ogscomments.linked"),"Item",str(item) + "-" + upper(size),"UnitNumber","Not OGS",0)+" "+lookup(?(item≥10000 and item≤30000,"45ogscomments.warehouse","45ogscomments.linked"),"Item",str(item) + "-" + upper(size),"UnitNumber","Not OGS",0)
         message "DescriptionHolder"
 
         ordered=str(id_number) +¬+str(item)+"-"+upper(size)+¬+                                                                                     /*item number*/

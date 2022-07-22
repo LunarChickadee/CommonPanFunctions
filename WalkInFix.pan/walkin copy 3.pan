@@ -323,7 +323,7 @@ loop
         
         tot=quant*price
         
-        MYDESCRIPTION = lookup("45ogscomments","Item",Item,"Description","",0) + ?(lookup("45ogscomments","Item",Item,"UnitNumber","",0)<>"","-"+lookup("45ogscomments","Item",Item,"UnitNumber","",0)+lookup("45ogscomments","Item",Item,"UnitName","",0),"")
+        MYDESCRIPTION = ?(lookup("45ogscomments","Item",Item,"UnitNumber","",0)<>"","-"+lookup("45ogscomments","Item",Item,"UnitNumber","",0)+lookup("45ogscomments","Item",Item,"UnitName","",0),"")
 
         ;; item number
         ordered=str(id_number) +¬+str(item)+"-"+upper(size)+¬+                                                                                     /*item number*/
@@ -338,8 +338,7 @@ loop
              +           /*adds description looked up from 45ogscomments.linked*/
            rep(chr(32),23-length(lookup(?(item≥10000 and item≤30000,"45ogscomments.warehouse","45ogscomments.linked"),"Item",str(item) + "-" + upper(size),"Description",
             "Not OGS",0)[1,23]))                                                                                    /*if item number is 8999 or 9999, put some padding and then the manually entered description. Otherwise, add padding. */
-            +rep(chr(32),5-length(str(lookup(?(item≥10000 and item≤30000,"45ogscomments.warehouse","45ogscomments.linked"),"Item",str(item) + "-" + upper(size),«Sz.»,
-            0,0))))+¬+str(lookup(?(item≥10000 and item≤30000,"45ogscomments.warehouse","45ogscomments.linked"),"Item",str(item) + "-" + upper(size),«Sz.»,
+            +rep(chr(32),5-length(?(lookup("45ogscomments","Item",str(item) + "-" + upper(size),"UnitNumber","",0)<>"","-"+lookup("45ogscomments","Item",str(item) + "-" + upper(size),"UnitNumber","",0)+lookup("45ogscomments","Item",str(item) + "-" + upper(size),"UnitName","",0),"")))+¬+str(lookup(?(item≥10000 and item≤30000,"45ogscomments.warehouse","45ogscomments.linked"),"Item",str(item) + "-" + upper(size),«Sz.»,
             0,0))+"#"+¬+                                                                                                /*adds spacing for size, and size, from 45ogscomments.linked (manual items get size 0#)*/
             rep(chr(32), 6-length(str(quant)))+str(quant)+¬+
             rep(chr(32),7-length(pattern(price,"#.##")))+pattern(price,"$#.##")+¬+

@@ -1,0 +1,9 @@
+global MYDESCRIPTION, DescriptionAddition
+
+MYDESCRIPTION=""
+DescriptionAddition=""
+
+
+MYDESCRIPTION = lookup("45ogscomments","Item",Item,"Description","",0) + ?(lookup("45ogscomments","Item",Item,"UnitNumber","",0)<>"","-"+lookup("45ogscomments","Item",Item,"UnitNumber","",0)+lookup("45ogscomments","Item",Item,"UnitName","",0),"")
+        DescriptionAddition=?(lookup("45ogscomments","Item",Item,"UnitNumber","",0)<>"","-"+lookup("45ogscomments","Item",Item,"UnitNumber","",0)+lookup("45ogscomments","Item",Item,"UnitName","",0),"")
+        ;; item number
